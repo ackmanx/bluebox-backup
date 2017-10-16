@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
+#If getting unknown file transfers, check the itemize column on the left for details.
+#Even a different permission group will trigger a change
+
 . banners.sh
 
 doRsync() {
     rsync \
         --verbose \
+        --itemize-changes \
         --archive \
         --human-readable \
         --delete \
