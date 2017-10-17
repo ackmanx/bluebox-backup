@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+. banners.sh
+
 doRsync() {
     rsync \
         --verbose \
@@ -33,15 +35,15 @@ warn() {
 
 warn
 
+musik
 SOURCE_DIR='/Volumes/BlueBox/Backup/Musik'
 TARGET_DIR='/Volumes/Storage'
 doRsync
 
+meineFotos
 SOURCE_DIR='/Volumes/BlueBox/Backup/Meine Fotos'
 TARGET_DIR='/Volumes/Storage'
 doRsync
 
-hostname=`hostname`
-date=`date`
-#-e enables interpretation of certain backslash-escaped characters
-echo -e "restore\t${hostname}\t${date}" >> /Volumes/BlueBox/Backup/updates.txt
+#-e enables interpretation of certain backslash-escaped characters, like my \t in there
+echo -e "restore\t$(hostname)\t$(date)" >> /Volumes/BlueBox/Backup/updates.txt

@@ -69,9 +69,5 @@ SOURCE_DIR='/Volumes/Storage/Meine Fotos'
 TARGET_DIR='/Volumes/BlueBox/Backup'
 doRsync
 
-sh /Volumes/BlueBox/rm-ds-store.sh
-
-hostname=`hostname`
-date=`date`
-#-e enables interpretation of certain backslash-escaped characters
-echo -e "backup\t${hostname}\t${date}" >> /Volumes/BlueBox/Backup/updates.txt
+#-e enables interpretation of certain backslash-escaped characters, like my \t in there
+echo -e "backup\t$(hostname)\t$(date)" >> /Volumes/BlueBox/Backup/updates.txt
