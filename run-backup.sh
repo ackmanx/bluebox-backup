@@ -3,6 +3,9 @@
 #If getting unknown file transfers, check the itemize column on the left for details.
 #Even a different permission group will trigger a change
 
+#Explanation of itemize-changes flags
+#https://stackoverflow.com/questions/1113948/rsync-output#answer-7818340
+
 . banners.sh
 
 doRsync() {
