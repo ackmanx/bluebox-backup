@@ -8,6 +8,7 @@ doRsync() {
         --archive \
         --human-readable \
         --delete \
+        --delete-excluded \
         --force \
         --exclude '.DS_Store' \
         --exclude '.dropbox*' \
