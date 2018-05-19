@@ -20,6 +20,7 @@ doRsync() {
         --exclude '.DS_Store' \
         --exclude '.dropbox' \
         --exclude 'Icon?' \
+        --exclude 'node_modules' \
         "${SOURCE_DIR}" \
         "${TARGET_DIR}"
 }
