@@ -1,3 +1,6 @@
+#These were generated from:
+#http://patorjk.com/software/taag/#p=display&f=Crazy&t=Drive
+
 meineFotos() {
 cat << "EOF"
                                                                                                        .-'''-.                   .-'''-.                 
