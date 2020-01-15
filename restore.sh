@@ -20,8 +20,7 @@ doRsync() {
 warn() {
   echo 'This will mirror...'
   echo ''
-  echo '/Volumes/BlueBox/Backup/Musik to /Volumes/Storage/Musik'
-  echo '/Volumes/BlueBox/Backup/Meine Fotos to /Volumes/Storage/Meine Fotos'
+  echo '/Volumes/BlueBox/Backup/Dropbox to /Volumes/Storage/Dropbox'
   echo ''
 
   echo 'Continue?'
@@ -37,12 +36,7 @@ warn() {
 warn
 
 musik
-SOURCE_DIR='/Volumes/BlueBox/Backup/Musik'
-TARGET_DIR='/Volumes/Storage'
-doRsync
-
-meineFotos
-SOURCE_DIR='/Volumes/BlueBox/Backup/Meine Fotos'
+SOURCE_DIR='/Volumes/BlueBox/Backup/Dropbox'
 TARGET_DIR='/Volumes/Storage'
 doRsync
 

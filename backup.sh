@@ -29,8 +29,6 @@ warn() {
   echo 'This will mirror...'
   echo ''
   echo '/Volumes/Storage/Dropbox to /Volumes/BlueBox/Backup/Dropbox'
-  echo '/Volumes/Storage/Musik to /Volumes/BlueBox/Backup/Musik'
-  echo '/Volumes/Storage/Meine Fotos to /Volumes/BlueBox/Backup/Meine Fotos'
   echo ''
 
   lastEntry=`tail -n 1 Backup/updates.txt`
@@ -57,16 +55,6 @@ warn
 
 dropbox
 SOURCE_DIR='/Volumes/Storage/Dropbox'
-TARGET_DIR='/Volumes/BlueBox/Backup'
-doRsync
-
-musik
-SOURCE_DIR='/Volumes/Storage/Musik'
-TARGET_DIR='/Volumes/BlueBox/Backup'
-doRsync
-
-meineFotos
-SOURCE_DIR='/Volumes/Storage/Meine Fotos'
 TARGET_DIR='/Volumes/BlueBox/Backup'
 doRsync
 
